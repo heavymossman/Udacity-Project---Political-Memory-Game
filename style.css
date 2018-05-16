@@ -1,0 +1,8 @@
+.container {
+  width: 50%;
+}
+
+.card {
+  border: 2px dotted black;
+  min-height: 200px;
+}
