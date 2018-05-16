@@ -3,6 +3,6 @@
 }
 
 .card {
-  border: 2px dotted black;
+  border: 1px solid black;
   min-height: 200px;
 }
