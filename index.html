@@ -5,21 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Michael's Political Memory Game</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container mb-3">
       <div class="row">
         <div class="col p-5">
           <h1 class="text-center">Welcome to Michael's Political Memory Game</h1>
+          <br />
           <h4>Rubric:</h4>
           <ul>
-            <li>Add font awesome</li>
+            <li><s>Add font awesome</s></li>
+            <li><s>Attach app,js</s></li>
             <li>Dynamically draw the grid so it can be redrawn</li>
-            <li>Create eight stars empty and eight filled to change when a new point is scored</li>
+            <li><s>Create eight stars empty and eight filled to change when a new point is scored</s></li>
             <li>Create eight characters</li>
             <li>Create cards and front and back switchable classes</li>
             <li>Shuffle the cards</li>
@@ -33,28 +37,42 @@
 
       <section id="game">
 
-        <div class="row p-1">
+        <div class="row text-center p-3">
+          <div class="col">
+
+          <p class="p-2"><button class="btn btn-danger ">PLAY THE MEMORY GAME</button></p>
+
+          <p id="demo"></p>
+
+
+            <i class="far fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i>
+
+
+          </div>
+        </div>
+
+        <div class="row p-1 text-center">
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
             <div class="mx-1"></div>
 
-          <div class="col card">
-            JEREMY CORBYN
+          <div class="col card front">
+            <img src="https://labour.org.uk/wp-content/uploads/2017/09/u0mXpY2m-400x400.jpg" class="img-fluid rounded mx-auto d-block">
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
 
@@ -63,25 +81,25 @@
         <div class="row p-1">
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
             <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
 
@@ -90,25 +108,25 @@
         <div class="row p-1">
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
             <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
 
@@ -117,25 +135,25 @@
         <div class="row p-1">
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
             <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
           <div class="mx-1"></div>
 
           <div class="col card">
-            JEREMY CORBYN
+
           </div>
 
 
@@ -149,5 +167,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -10,8 +10,18 @@ body {
 .card {
   border: 1px solid black;
   min-height: 200px;
+  background-color: rgb(138, 40, 37)
+}
+
+.front {
+  background-color: white;
 }
 
 li {
   color: red;
+}
+.fa, .far, .fas {
+    font-family: Font Awesome\ 5 Free;
+    font-size: 2rem;
+    color: #ccac00;
 }
