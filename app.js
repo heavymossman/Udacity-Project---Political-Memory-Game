@@ -29,35 +29,40 @@ const allCharacters = [
   jeremy, tom, john, diane, emily, dawn, shami, ashworth
 ];
 
+//Build the intro row and col to store game information later
+const int = document.createElement("DIV");
+int.className = "row text-center p-3";
+
+const intCol = document.createElement("DIV");
+intCol.className = "col";
+
+const newPara = document.createElement("P");
+newPara.className = "p-2";
+
+const button = document.createElement("button");
+button.className = "btn btn-danger"
+const buttonContet = document.createTextNode("PLAY THE MEMORY GAME");
+
+
+button.appendChild(buttonContet);
+newPara.appendChild(button);
+intCol.appendChild(newPara);
+
+int.appendChild(intCol); //add the col to the row
+
+gameIntro.appendChild(int); //add the row to the section above the grid
+
+
+
+
+
 function respondToTheClick(evt){
 	//The target sets the indivudal child elements of the table, where we set the overall event listener (rather than created indivudal listenrs)
-	evt.target.style.backgroundColor = 'black';
+	evt.target.style.backgroundColor = 'white';
 };
 
 function buildGame() {
 
-  //Build the intro row and col to store game information later
-  const int = document.createElement("DIV");
-  int.className = "row text-center p-3";
-
-  const intCol = document.createElement("DIV");
-  intCol.className = "col";
-
-  const newPara = document.createElement("P");
-  newPara.className = "p-2";
-
-  const button = document.createElement("button");
-  button.className = "btn btn-danger"
-  const buttonContet = document.createTextNode("PLAY THE MEMORY GAME");
-
-
-  button.appendChild(buttonContet);
-  newPara.appendChild(button);
-  intCol.appendChild(newPara);
-
-  int.appendChild(intCol); //add the col to the row
-
-  gameArea.appendChild(int); //add the row to the section above the grid
 
   for (let row = 0; row < 4; row++) {
     let newRow = document.createElement("DIV");
@@ -65,7 +70,7 @@ function buildGame() {
 
     for (let col = 0; col < 4; col++){
       let newCol = document.createElement("DIV");
-      newCol.className = "col card mr-1";
+      newCol.className = "col card mr-2";
       newCol.addEventListener('click', respondToTheClick);
       newRow.appendChild(newCol);
 
