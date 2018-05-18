@@ -46,7 +46,7 @@ const allCharacters = [
   jeremy, tom, john, diane, emily, dawn, shami, ashworth
 ];
 
-let rand = shuffle(allCharacters);
+const rand = shuffle(allCharacters);
 
 console.log(rand[1])
 
