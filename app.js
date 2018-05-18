@@ -9,8 +9,6 @@
 //Store the section id in the variable in order to generate the rows and cols
 const gameArea = document.getElementById('game');
 
-console.log(gameArea);
-
 function Character (name, picture) {
   this.name = name;
   this.picture = picture;
@@ -39,13 +37,7 @@ intCol.className = "col";
 const newPara = document.createElement("P");
 newPara.className = "p-2";
 
-const button = document.createElement("button");
-button.className = "btn btn-danger"
-const buttonContet = document.createTextNode("PLAY THE MEMORY GAME");
 
-
-button.appendChild(buttonContet);
-newPara.appendChild(button);
 intCol.appendChild(newPara);
 
 int.appendChild(intCol); //add the col to the row
@@ -62,7 +54,7 @@ function buildGame() {
 
     for (let col = 0; col < 4; col++){
       let newCol = document.createElement("DIV");
-      newCol.className = "col card mr-2";
+      newCol.className = "col card mr-4";
       //Okay this is not the best for performance, but its add the toggle class function to each col
       $(newCol).click(function(evt){
             $(newCol).toggleClass("front");
@@ -75,6 +67,3 @@ function buildGame() {
 
   }
 }
-
-
-buildGame();

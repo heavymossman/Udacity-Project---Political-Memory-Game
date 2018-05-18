@@ -10,7 +10,8 @@ body {
 .card {
   border: 1px solid black;
   min-height: 200px;
-  background-color: rgb(138, 40, 37)
+  background-color: rgb(138, 40, 37);
+  cursor: pointer;
 }
 
 .front {
