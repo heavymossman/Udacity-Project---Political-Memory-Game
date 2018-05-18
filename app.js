@@ -6,6 +6,10 @@
 
 //Check out this for a working example, http://fabiolavieyra.com/blog/memory-game
 
+//Store the section id in the variable in order to generate the rows and cols
+const gameArea = document.getElementById('game');
+
+console.log(gameArea);
 
 function Character (name, picture) {
   this.name = name;
@@ -26,4 +30,35 @@ const allCharacters = [
 ];
 
 
-console.log(allCharacters);
+
+function buildGame() {
+
+  const int = document.createElement("DIV");
+  int.className = "row text-center p-3";
+
+  const intCol = document.createElement("DIV");
+  intCol.className = "col";
+
+  int.appendChild(intCol);
+
+  gameArea.appendChild(int);
+
+  for (let row = 0; row < 4; row++) {
+    let newRow = document.createElement("DIV");
+    newRow.className = "row text-center p-3";
+
+    for (let col = 0; col < 4; col++){
+      let newCol = document.createElement("DIV");
+      newCol.className = "col card mr-1";
+
+      newRow.appendChild(newCol);
+
+    }
+
+    gameArea.appendChild(newRow);
+
+  }
+}
+
+
+buildGame();
