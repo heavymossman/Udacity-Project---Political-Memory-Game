@@ -54,11 +54,11 @@ gameIntro.appendChild(int); //add the row to the section above the grid
 
 
 
-
-
 function respondToTheClick(evt){
-	//The target sets the indivudal child elements of the table, where we set the overall event listener (rather than created indivudal listenrs)
-	evt.target.style.backgroundColor = 'white';
+  //So addClass is jQuery so we convert the evt from js to Jaqery then use the addClass feature. VERY COOL1
+  $(evt.target).click(function respondToTheClick(evt){
+        $(evt.target).toggleClass("front");
+    });
 };
 
 function buildGame() {
