@@ -43,12 +43,12 @@ const shami = new Character ("Shami Chakrabarti", "shami.jpg");
 const ashworth = new Character ("Jonathan Ashworth", "jonathan.jpg");
 
 const allCharacters = [
-  jeremy, tom, john, diane, emily, dawn, shami, ashworth
+  jeremy, tom, john, diane, emily, dawn, shami, ashworth, jeremy, tom, john, diane, emily, dawn, shami, ashworth
 ];
 
 const rand = shuffle(allCharacters);
 
-console.log(rand[1])
+console.log(rand[1].name)
 
 /*
 const allCharacters = {
@@ -104,7 +104,28 @@ function buildGame() {
       });
 
 
-      newCol.innerHTML = rand.name + "<br>" + rand.picture;
+      for (let i = 0; i < rand.length; i++) {
+        let character = document.createElement("P");
+        character.append(rand[i].name);
+        console.log(character)
+        newCol.appendChild(character);
+      }
+
+       //+ "<br>" + rand.picture;
+
+      /*for (let i in rand) {
+        let character = document.createElement("P")
+        character.innerHTML = rand[i].name;
+        newCol.append(character);
+        console.log(character)
+      }*/
+
+
+
+
+      //newCol.innerHTML = rand.name + "<br>" + rand.picture;
+
+      //console.log(rand)
 
       newRow.appendChild(newCol);
 
