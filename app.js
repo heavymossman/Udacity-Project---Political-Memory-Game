@@ -53,14 +53,6 @@ int.appendChild(intCol); //add the col to the row
 gameIntro.appendChild(int); //add the row to the section above the grid
 
 
-
-function respondToTheClick(evt){
-  //So addClass is jQuery so we convert the evt from js to Jaqery then use the addClass feature. VERY COOL1
-  $(evt.target).click(function respondToTheClick(evt){
-        $(evt.target).toggleClass("front");
-    });
-};
-
 function buildGame() {
 
 
@@ -71,7 +63,10 @@ function buildGame() {
     for (let col = 0; col < 4; col++){
       let newCol = document.createElement("DIV");
       newCol.className = "col card mr-2";
-      newCol.addEventListener('click', respondToTheClick);
+      //Okay this is not the best for performance, but its add the toggle class function to each col
+      $(newCol).click(function(evt){
+            $(newCol).toggleClass("front");
+        });
       newRow.appendChild(newCol);
 
     };
@@ -83,5 +78,3 @@ function buildGame() {
 
 
 buildGame();
-
-gameArea.addEventListener('click', respondToTheClick);
