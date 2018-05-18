@@ -27,6 +27,8 @@ const allCharacters = [
   jeremy, tom, john, diane, emily, dawn, shami, ashworth
 ];
 
+
+
 //Build the intro row and col to store game information later
 const int = document.createElement("DIV");
 int.className = "row text-center p-3";
@@ -58,7 +60,23 @@ function buildGame() {
       //Okay this is not the best for performance, but its add the toggle class function to each col
       $(newCol).click(function(evt){
             $(newCol).toggleClass("front");
-        });
+      });
+
+
+    allCharacters.forEach(function(character, i) {
+        let newCharacter = document.createElement("P");
+        newCharacter.textContent = character.name;
+        console.log(newCharacter[0]);
+
+        newCol.appendChild(newCharacter);
+      });
+
+
+
+      //
+
+      //newCol.innerHTML = jeremy.name + "<br>" + jeremy.picture;
+
       newRow.appendChild(newCol);
 
     };

@@ -12,10 +12,12 @@ body {
   min-height: 200px;
   background-color: rgb(138, 40, 37);
   cursor: pointer;
+  color: rgb(138, 40, 37);
 }
 
 .front {
   background-color: green;
+  color: white;
 }
 
 li {
